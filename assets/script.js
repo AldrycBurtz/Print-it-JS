@@ -42,13 +42,13 @@ displayDots (position)
 
 const image = document.createElement("img")
 image.setAttribute("src",imagePath+slides[position].image)
-console.log(image)
+
 image.setAttribute("class", "banner-img")
 
 const tagLine = document.createElement("p")
 tagLine.innerHTML = slides[position].tagLine
 
-console.log(tagLine)
+
 
 banner.appendChild(image)
 banner.appendChild(tagLine)
