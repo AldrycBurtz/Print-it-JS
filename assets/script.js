@@ -17,6 +17,8 @@ const slides = [
 	}
 ]
 
+const imagePath = "assets/images/slideshow/"
+
 
 let banner = document.querySelector("#banner");
 let position = 0
@@ -39,7 +41,7 @@ for (let i = 0; i < slides.length; i++) {
 displayDots (position)
 
 const image = document.createElement("img")
-image.setAttribute("src","/assets/images/slideshow/"+slides[position].image)
+image.setAttribute("src",imagePath+slides[position].image)
 console.log(image)
 image.setAttribute("class", "banner-img")
 
@@ -59,7 +61,7 @@ leftArrow.addEventListener("click", () => {
 	if (position < 0) {
 		position = slides.length -1
 	}
-	image.setAttribute ("src","/assets/images/slideshow/"+slides[position].image)
+	image.setAttribute ("src",imagePath+slides[position].image)
 	tagLine.innerHTML = slides[position].tagLine
 	displayDots (position)
 })
@@ -71,7 +73,7 @@ rightArrow.addEventListener("click", () => {
 	if (position >= slides.length) {
 		position = 0
 	}
-	image.setAttribute ("src","/assets/images/slideshow/"+slides[position].image)
+	image.setAttribute ("src",imagePath+slides[position].image)
 	tagLine.innerHTML = slides[position].tagLine
 	displayDots (position)
 })
